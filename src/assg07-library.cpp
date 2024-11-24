@@ -95,6 +95,30 @@ void swap(int& a, int& b)
 }
 
 
+/** @brief swap two given char values in memory
+ *
+ * Given two char values, swap their locations
+ * in memory.  We can do this because the parameters
+ * are passed by reference, so when we modify them
+ * in this function, we are modifying the original
+ * values passed to us.
+ *
+ * @param a A reference to a value in memory to be swapped with
+ *    some other value.
+ * @param b A second reference to a value in memory to be swapped.
+ *
+ * @returns void This is a void function.  Our work is returned
+ *    implicitly by swapping the values in the referenced memory
+ *    locations a and b.
+ */
+
+void swap(char& a, char& b)
+{
+    char temp = a;
+    a = b;
+    b = temp;
+}
+
 /** @brief sort three values in ascending order
  *
  * Given three integer values, passed in by reference,
@@ -134,3 +158,35 @@ void threeSort(int& a, int& b, int& c)
     swap(a, b);
   }
 }
+
+/** @brief sort three values in ascending order
+ *
+ * Given three char values, passed in by reference,
+ * cause the three values to be sorted in the
+ * variables with the smallest value in the first
+ * parameter a, the largest in the last c, and the
+ * in between one in b.
+ *
+ * @param a A reference to a value in memory to compared and sorted.
+ * @param b A reference to a value in memory to compared and sorted.
+ * @param c A reference to a value in memory to compared and sorted.
+ *
+ * @returns void This is a void function.  Our work is returned
+ *    implicitly by comparing and sorting the 3 values into
+ *    ascending order, smallest in a, largest in c and in between
+ *    value in b.
+ */
+
+void threeSort(char& a, char& b, char& c)
+{
+    if (a > b){ 
+      swap(a, b);
+    }
+    if (b > c){ 
+      swap(b, c);
+    }
+    if (a > b){ 
+      swap(a, b);
+    }
+}
+
