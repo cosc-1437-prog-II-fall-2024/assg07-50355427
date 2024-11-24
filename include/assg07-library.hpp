@@ -18,6 +18,8 @@ using namespace std;
 int nextFibonacciNumber(bool resetSequence = false);
 void swap(char& a, char& b);
 void threeSort(char& a, char& b, char& c);
+void threeSort(string& a, string& b, string& c);
+void swap(string& a, string& b);
 
 // given to you to as example solutions from previous assignment
 void swap(int& a, int& b);
