@@ -49,6 +49,25 @@ using namespace std;
  */
 // your implementation of task 1 nextFibonacciNumber() goes here
 
+int nextFibonacciNumber(bool resetSequence = false)
+{
+    static int fib_0 = 0;
+    static int fib_1 = 1;
+
+    if (resetSequence)
+    {
+        fib_0 = 0;
+        fib_1 = 1;
+        return fib_1;  
+    }
+    
+    int nextFib = fib_0 + fib_1;
+
+    fib_0 = fib_1;
+    fib_1 = nextFib;
+
+    return nextFib;
+}
 
 /** @brief swap two given integer values in memory
  *
